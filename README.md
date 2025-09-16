@@ -7,7 +7,7 @@
 - ## Future plan
 - I hope to use these learning records and the knowledge I have gained for my future studies and career.
 - ## Course Information
-- - **Course Title:** Data Structures  
+- **Course Title:** Data Structures  
 - **Course Code:** CS203A
 - **Duration**: 18 Weeks (including Midterm and Final exams)  
 - **Semester:** 11401  

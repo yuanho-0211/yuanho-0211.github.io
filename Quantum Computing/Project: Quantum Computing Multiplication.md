@@ -57,9 +57,11 @@ backend = Aer.get_backend('qasm_simulator')
 transpiled_circuit = transpile(qc, backend) 
 job = backend.run(transpiled_circuit, shots=1024) 
 result = job.result() 
-counts = result.get_counts(qc)  
+counts = result.get_counts(qc) 
+# Print and plot the result 
 print(counts) 
 plot_histogram(counts) 
 plt.show() 
+# Draw the circuit 
 qc.draw("mpl")
 ```

@@ -1,4 +1,5 @@
 ## Quantum Computing Multiplication 14*7
+```c
 from qiskit import QuantumCircuit,transpile
 from qiskit.visualization import circuit_drawer
 from qiskit_aer import Aer
@@ -61,3 +62,4 @@ print(counts)
 plot_histogram(counts) 
 plt.show() 
 qc.draw("mpl")
+```

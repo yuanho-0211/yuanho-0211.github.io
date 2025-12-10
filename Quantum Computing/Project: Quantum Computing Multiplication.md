@@ -74,4 +74,5 @@ result = backend.run(job, shots=1024).result()
 counts = result.get_counts()
 plot_histogram(counts)
 ```
-<Figure size 640x480 with 1 Axes>![Uploading image.png…]()
+<Figure size 640x480 with 1 Axes><img width="585" height="462" alt="image" src="https://github.com/user-attachments/assets/7912935e-19d3-4902-9d58-3550c653ad36" />
+

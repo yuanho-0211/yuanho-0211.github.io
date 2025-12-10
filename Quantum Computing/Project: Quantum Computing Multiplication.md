@@ -65,3 +65,4 @@ plt.show()
 # Draw the circuit 
 qc.draw("mpl")
 ```
+<Figure size 2228.98x4966.5 with 1 Axes><img width="1736" height="3844" alt="image" src="https://github.com/user-attachments/assets/f1f6c7a9-3bdd-4dd0-a6c7-62807ef7dc08" />

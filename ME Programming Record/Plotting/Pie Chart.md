@@ -23,5 +23,6 @@ pie(enrollments, labels_with_percent);
 title('Enrollment Percentage');
 ```
 ## plot:
-![Uploading image.png…]()
+<img width="1455" height="735" alt="image" src="https://github.com/user-attachments/assets/ef9fd4d2-b538-44bb-9b27-9b417c701dc3" />
+
 

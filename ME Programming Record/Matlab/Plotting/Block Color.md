@@ -1,6 +1,6 @@
 # Block Color
 
--- **Figure 1**
+- **Figure 1**
 ```c
 %color
 cmap = [1 1 1; 0 0 0];  

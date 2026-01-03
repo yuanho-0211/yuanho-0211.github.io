@@ -1,4 +1,4 @@
-``c
+```c
 % A
 A = randi([1, 30], 5, 4);
 disp('Matrix A:');

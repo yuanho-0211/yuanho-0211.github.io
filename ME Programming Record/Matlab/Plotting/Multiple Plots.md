@@ -1,9 +1,9 @@
 # Multiple Plots
 
--**Bar Chart**-
--**Pie Chart**-
--**Horizontal Bar Chart**-
--**Stem Plot**-
+- **Bar Chart**
+- **Pie Chart**
+- **Horizontal Bar Chart**
+- **Stem Plot**
 
 ```c
 %departments

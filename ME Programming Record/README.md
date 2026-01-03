@@ -1,4 +1,4 @@
-##ME Programming Record
+## ME Programming Record
 -- 透過學習基礎程式，將學到的技能用於現實中，並培養解決問題的能力  
 ### Python
 - 使用 **Python** 撰寫基礎程式，學習變數、條件判斷與迴圈等基本語法。

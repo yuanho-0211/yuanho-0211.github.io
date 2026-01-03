@@ -12,7 +12,7 @@ ylabel('Temperatures')
 title('Temperatures one afternoon')
 axis([1 7 60 75])
 ```
-### plotting
+### plotting:
 <img width="826" height="743" alt="image" src="https://github.com/user-attachments/assets/5de9b26f-d6da-4932-88c4-826ec36551e8" />
 
 

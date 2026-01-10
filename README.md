@@ -19,10 +19,12 @@
 - **Contact:** [Yu-An Ho](mailto:ho950211@gmail.com /s1130824@mail.yzu.edu.tw)  
 
 ## C#
-　紀錄線性代數作業的內容
+　　紀錄線性代數作業的內容
 ## C++
 - 紀錄線性代數作業(RREF)的內容
 ## ME Programming Record
 - 紀錄大一在機械系所寫的程式
 - python
 - Matlab
+## Quantum Computing
+用量子電路模擬二進位乘法，得到 14×7 的結果（用量子邏輯門把「手算二進位長乘法」搬到量子電路裡）

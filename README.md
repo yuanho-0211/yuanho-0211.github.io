@@ -17,3 +17,9 @@
     - Monday 09:10–10:00 (R60104)
     - Tuesday 15:10–17:00 (R1102)
 - **Contact:** [Yu-An Ho](mailto:ho950211@gmail.com /s1130824@mail.yzu.edu.tw)  
+
+## C#
+-　紀錄線性代數作業的內容
+## C++
+- 紀錄線性代數作業(RREF)的內容
+## 

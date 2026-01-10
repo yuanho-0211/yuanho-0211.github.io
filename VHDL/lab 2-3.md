@@ -69,4 +69,4 @@ architecture ar of lab02_2 is
    end process;
  end ar;
 ```
-<img width="1482" height="442" alt="image" src="https://github.com/user-attachments/assets/8eb68a98-ed17-4d5d-ae26-1cacfacf8bcf" />
+

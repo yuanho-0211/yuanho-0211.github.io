@@ -18,4 +18,4 @@ begin
 
 end arc;
 ```
-<img width="1480" height="447" alt="image" src="https://github.com/user-attachments/assets/ef2cb5e8-5c67-48e2-a999-e798163d02f9" />
+<img width="1475" height="435" alt="image" src="https://github.com/user-attachments/assets/41887d7a-b05c-431f-a1e7-17b9515cf0ef" />

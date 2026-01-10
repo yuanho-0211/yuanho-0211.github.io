@@ -22,6 +22,7 @@
 　　紀錄線性代數作業的內容
 ## C++
 - 紀錄線性代數作業(RREF)的內容
+- Traveling Salesman Problem: 最小化總距離
 ## ME Programming Record
 - 紀錄大一在機械系所寫的程式
 - python

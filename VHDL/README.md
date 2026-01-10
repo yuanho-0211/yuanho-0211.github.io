@@ -10,3 +10,5 @@
 - 透過 NOT、AND、OR 運算決定輸出
 
 ### lab 2-3
+- 8-to-3 priority encoder with enable
+- 輸入 8 個訊號，輸出其二進位表示，EN 控制是否有效。

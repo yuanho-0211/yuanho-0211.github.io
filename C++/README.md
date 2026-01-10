@@ -6,3 +6,11 @@
 - 計算 rank
 - 顯示 Rank(A)、Rank(Ab)。
 - 顯示方程組是否有解。
+## Traveling Salesman Problem
+- 讀入城市距離矩陣 (25City_forTSP.csv)。
+- 生成 TSP 的整數線性規劃模型
+- 決策變數 x_i_j 表示是否從城市 i 到城市 j。
+- 目標函數：最小化總距離。
+- 約束條件：
+每個城市正好出發一次、正好到達一次。
+子回路消除（MTZ 法）。

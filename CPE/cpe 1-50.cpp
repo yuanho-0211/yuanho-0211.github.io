@@ -30,3 +30,37 @@ int main()
     }
 }
 
+```c
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int t, r;
+    int a[500];
+
+    cin >> t;
+    while (t--)
+    {
+        cin >> r;
+        for (int i = 0; i < r; i++)
+        {
+            cin >> a[i];
+        }
+
+        sort(a, a + r);          // 排序
+        int mid = a[r / 2];      // 中位數
+
+        int sum = 0;
+        for (int i = 0; i < r; i++)
+        {
+            sum += abs(a[i] - mid);
+        }
+
+        cout << sum << endl;
+    }
+    return 0;
+}
+```

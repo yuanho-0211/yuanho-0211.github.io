@@ -30,7 +30,7 @@ int main()
     }
 }
 
-```c
+-------------------------------------
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -63,4 +63,3 @@ int main()
     }
     return 0;
 }
-```

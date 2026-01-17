@@ -1,3 +1,138 @@
+error
+#include <iostream>
+using namespace std;
+int main()
+{
+	int kuti, lakh, hajar, shata,a,b,no;
+	int n = 1;
+	int k = 1;
+	int m = 1;
+	int array[10];
+	while (cin >> a)
+	{
+		while (a > 0)
+		{
+			array[n] = a % 10000000;
+			a = a / 10000000;
+			n++;
+		}
+		for (int i = n-1; i >= 0; i--)
+		{
+			int d = i;
+			if (d >= (10000000))
+			{
+				cout << d / 10000000 << kuti;
+				d = d % 10000000;
+			}
+			if (d >= (100000))
+			{
+				cout << d / 100000 << lakh;
+				d = d % 100000;
+			}
+			if (d >= (1000))
+			{
+				cout << d / 1000 << hajar;
+				d = d % 1000;
+			}
+			if (d >= (10000000))
+			{
+				cout << d / 10000000 << shata;
+				d = d % 10000000;
+			}
+			if (i==1)
+			{
+				cout << d % 10000000;
+			}
+		}
+		
+		while (cin >> a)
+		{
+			int d = 0, t = k;
+			do {
+				d++;
+				t /= 10;
+			} while (t);
+
+			for (int i = 0; i < 4 - d; i++)
+				cout << " ";
+			cout << k << " ";
+		
+
+			m++;
+
+
+	}
+
+}
+--------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    long long a;
+    int n = 1;
+    int k = 1;
+    int array[20];
+
+    while (cin >> a)
+    {
+        // 1. 切段存陣列（從 1 開始）
+        n = 1;
+        while (a > 0)
+        {
+            array[n] = a % 10000000;
+            a = a / 10000000;
+            n++;
+        }
+
+        // 2. 印 case 編號（補空白到 4 格）
+        int d = 0, t = k;
+        do {
+            d++;
+            t /= 10;
+        } while (t);
+
+        for (int i = 0; i < 4 - d; i++)
+            cout << " ";
+        cout << k << " ";
+
+        // 3. 反向印每段（注意 i 從 n-1 開始到 1）
+        for (int i = n - 1; i >= 1; i--)
+        {
+            int d = array[i];
+
+            if (d == 0) {
+                if (i > 1) cout << " kuti";
+                continue;
+            }
+
+            if (d >= 100000) {
+                cout << " " << d / 100000 << " lakh";
+                d %= 100000;
+            }
+            if (d >= 1000) {
+                cout << " " << d / 1000 << " hajar";
+                d %= 1000;
+            }
+            if (d >= 100) {
+                cout << " " << d / 100 << " shata";
+                d %= 100;
+            }
+            if (d > 0) {
+                cout << " " << d;
+            }
+
+            if (i > 1) cout << " kuti";
+        }
+
+        cout << "\n";
+        k++; // case 編號 +1
+    }
+
+    return 0;
+}
+------------------------------------------------------------
 #include <iostream>
 using namespace std;
 

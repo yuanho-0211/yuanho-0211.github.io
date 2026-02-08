@@ -89,4 +89,36 @@ int main() {
     }
     return 0;
 }
+---------------------------------------------------------------
+#include <iostream>
+using namespace std;
 
+int main() {
+    int a, b;
+    while (cin >> a >> b) {
+        int start = min(a, b);
+        int end   = max(a, b);
+
+        int maxCycle = 0;
+
+        for (int i = start; i <= end; i++) {
+            long long n = i;
+            int c = 1;  // 包含自己
+
+            while (n != 1) {
+                if (n % 2 == 1)
+                    n = 3 * n + 1;
+                else
+                    n = n / 2;
+                c++;
+            }
+
+            if (c > maxCycle)
+                maxCycle = c;
+        }
+
+        // 輸出順序要照輸入的 a, b
+        cout << a << " " << b << " " << maxCycle << endl;
+    }
+    return 0;
+}

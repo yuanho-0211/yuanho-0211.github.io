@@ -21,3 +21,15 @@ int main() {
     }
     return 0;
 }
+------------------------------
+#include <iostream>
+#include <cmath> // 需要 abs
+using namespace std;
+
+int main() {
+    long long a, b;
+    while (cin >> a >> b) {     // 讀到 EOF 自動結束 (ctrl+z enter)
+        cout << abs(a - b) << endl;
+    }
+    return 0;
+}

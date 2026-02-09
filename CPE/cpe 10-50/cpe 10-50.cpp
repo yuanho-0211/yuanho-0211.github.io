@@ -1,4 +1,4 @@
-#include<iostream>
+g#include<iostream>
 #include <string>
 using namespace std;
 int main()
@@ -28,4 +28,27 @@ int main()
 		}
 		cout << a << endl;
 	}
+}
+-----------------------------------------
+#include <iostream>
+using namespace std;
+
+int digitSum(int n) {
+    int sum = 0;
+    while (n > 0) {
+        sum += n % 10;
+        n /= 10;
+    }
+    return sum;
+}
+
+int main() {
+    long long n;
+    while (cin >> n && n != 0) {
+        while (n >= 10) {   // 只要不是個位數就繼續拆
+            n = digitSum(n);
+        }
+        cout << n << endl;
+    }
+    return 0;
 }

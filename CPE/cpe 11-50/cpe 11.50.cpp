@@ -73,3 +73,43 @@ int main()
         cout << endl;
     }
 }
+-------------------------------------------------------
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    string a;
+    string b;
+
+    while (getline(cin,a)&& getline(cin,b))
+    {
+        int da[26] = {0};
+        int db[26] = {0};
+
+        // 統計 a 的字母次數
+        for (int i = 0; i < a.size(); i++)
+        {
+            da[a[i] - 'a']++;
+        }
+
+        // 統計 b 的字母次數
+        for (int i = 0; i < b.size(); i++)
+        {
+            db[b[i] - 'a']++;
+        }
+
+        // 輸出共同字母（依字母順序）
+        for (int k = 0; k < 26; k++)
+        {
+            int times = min(da[k], db[k]);
+            for (int t = 0; t < times; t++)
+            {
+                char r = k + 'a';
+                cout << r;
+            }
+        }
+        cout << endl;
+    }
+}

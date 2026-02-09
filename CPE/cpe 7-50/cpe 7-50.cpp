@@ -91,3 +91,36 @@ int main() {
 
     return 0;
 }
+----------------------------------------------------------
+#include <iostream>
+#include <set>
+#include <map>
+#include <string>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    cin.ignore();
+
+    set<string> countries;      // 存所有國家（自動排序 + 去重）
+    map<string, int> cnt;       // 計數用
+
+    for (int i = 0; i < n; i++) {
+        string country;
+        cin >> country;
+        countries.insert(country);
+        cnt[country]++;
+
+        string rest;
+        getline(cin, rest); // 把名字吃掉
+    }
+
+    // 用明確型別迭代 set
+    for (set<string>::iterator it = countries.begin(); it != countries.end(); ++it) {
+        string c = *it;
+        cout << c << " " << cnt[c] << endl;
+    }
+
+    return 0;
+}

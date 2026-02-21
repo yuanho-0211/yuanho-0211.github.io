@@ -39,3 +39,39 @@ int main()
 		}
 }
 ---------------------------------------------------
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+    vector<string> lines;
+    string s;
+
+    // 讀到 EOF
+    while (getline(cin, s)) {
+        lines.push_back(s);
+    }
+
+    int n = lines.size();
+    int maxLen = 0;
+
+    // 找最長行
+    for (int i = 0; i < n; i++) {
+        if (lines[i].size() > maxLen)
+            maxLen = lines[i].size();
+    }
+
+    // 順時針旋轉 90 度
+    for (int col = 0; col < maxLen; col++) {
+        for (int row = n - 1; row >= 0; row--) {
+            if (col < lines[row].size())
+                cout << lines[row][col];
+            else
+                cout << ' ';
+        }
+        cout << endl;
+    }
+
+    return 0;
+}

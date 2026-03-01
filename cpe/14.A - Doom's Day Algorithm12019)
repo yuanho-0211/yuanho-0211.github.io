@@ -1,0 +1,68 @@
+```c
+#include<iostream>
+using namespace std;
+int main()
+{
+	int t, m, d,x;
+	string s[7] = { "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday" };
+	cin >> t;
+	while (t--)
+	{
+		cin >> m >> d;
+		int y;
+		switch (m)
+		{
+		case 1:
+			x=10;
+			break;
+		case 2:
+			x = 21;
+			break;
+		case 3:
+			x = 7;
+			break;
+		case 4:
+			x = 4;
+			break;
+		case 5:
+			x = 9;
+			break;
+		case 6:
+			x = 6;
+			break;
+		case 7:
+			x = 11;
+			break;
+		case 8:
+			x = 8;
+			break;
+		case 9:
+			x = 5;
+			break;
+		case 10:
+			x = 10;
+			break;
+		case 11:
+			x = 7;
+			break;
+		case 12:
+			x = 12;
+			break;
+		}
+		y = (d - x)%7;
+		if (y<0)
+		{
+			cout << s[(y+7+7)%7];
+		}
+		else if (y == 0)
+		{
+			cout << s[0];
+		}
+		else
+		{
+			cout << s[(y+7)%7];
+		}
+		cout << endl;
+	}
+}
+```

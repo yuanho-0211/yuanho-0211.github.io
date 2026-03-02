@@ -1,0 +1,47 @@
+```c
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	int n,m;
+	
+
+	while (cin >> n)
+	{
+		vector<int>v;
+		bool o = false;
+		int d = n;
+		while (d--)
+		{
+			cin >> m;
+			v.push_back(m);
+		}
+		for (int k = 1; k <= n - 1; k++)
+		{
+				for (int i = 0; i <=v.size()-2; i++)
+				{
+						if (abs(v[i] - v[i + 1]) == k)
+						{
+							break;
+						}
+						if (i == v.size() - 2)
+						{
+							cout << "Not jolly" << endl;
+							o = true;
+							break;
+						}
+				}
+				if (o)
+				{
+					break;
+				}
+		}
+		if (!o)
+		{
+			cout << "Jolly" << endl;
+		}
+		
+	}
+}
+```

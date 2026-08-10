@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b,c,d;
+	while(cin>>a>>b)
+	{
+		c=min(a,b);
+		d=max(a,b);
+		int m=0;
+		for(int i=c;i<=d;i++)
+		{
+			int w=i;
+			int y=1;
+			while(w!=1)
+			{
+				if(w%2==0)
+				{
+					w=w/2;
+					y++;
+				}
+				else
+				{
+					w=3*w+1;
+					y++;
+				}
+			}
+			if(m<y)
+			{
+				m=y;
+			}
+		}
+		cout<<a<<" "<<b<<" "<<m<<endl;
+	}
+}

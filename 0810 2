@@ -1,0 +1,12 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	long long m,n;
+	while(cin>>m>>n)
+	{
+		long long t=abs(n-m);
+		cout<<t<<endl;
+	}
+}

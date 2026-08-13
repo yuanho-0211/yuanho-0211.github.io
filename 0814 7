@@ -1,0 +1,57 @@
+#include<iostream>
+#include<string>
+#include<sstream>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int n;
+	string s;
+	string a;
+	int t=0;
+	string c[2000];
+	int m[2000]={0};
+	cin>>n;
+	cin.ignore(1000,'\n');
+	
+	while(n--)
+	{
+		bool w=false;
+		getline(cin,s);
+		stringstream bb(s);//bb變數
+		//跟stringstream bb不一樣
+		bb >> a;
+		for(int i=0;i<t;i++)
+		{
+			if(c[i]==a)
+			{
+				m[i]++;
+				w=true;
+				break;
+			}
+		}
+		if(!w)
+		{
+			//t++ error
+			c[t]=a;
+			m[t]++;
+			t++;//corret
+		}
+	}
+	for(int i=0;i<t-1;i++)
+		{
+			for(int j=0;j<t-1-i;j++)
+			{
+				if(c[j]>c[j+1])//都是j  +1 
+				{
+					swap(c[j+1],c[j]);//都是j  +1
+					swap(m[j+1],m[j]);//都是j  +1
+				
+				}
+			}
+		}
+	for(int i=0;i<t;i++)
+    {
+		cout<<c[i]<<" "<<m[i]<<endl;
+	}
+}

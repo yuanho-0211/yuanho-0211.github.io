@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s[100];
+	int a=0;
+	int m=0;
+	while(getline(cin,s[a]))
+	{
+		if(m<s[a].size())
+		{
+			m=s[a].size();
+		
+		}
+		a++;
+	}
+	for(int j=0;j<m;j++)
+	{
+		for(int i=a-1;i>=0;i--)
+		{
+			if(s[i].size()<=j)
+			{
+				cout<<" ";
+				continue;
+			}
+			cout<<s[i][j];
+		}
+		cout<<endl;
+	}
+	
+}

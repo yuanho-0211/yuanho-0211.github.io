@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a;
+	int t;
+	while(cin>>a)
+	{
+		bool b=false;
+		if(a==0)
+		{
+			break;
+		}
+		while(!b)
+		{
+			t=0;
+			while(a!=0)
+		    {
+			  t=t+a%10;
+			  a=a/10;
+		    }
+			if(t/10==0)
+			{
+				b=true;
+				break;
+			}
+			a=t;
+			
+		}
+		 cout<<t<<endl;
+	}
+}

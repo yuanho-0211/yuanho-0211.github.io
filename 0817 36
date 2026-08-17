@@ -1,0 +1,62 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+int main()
+{
+	int t,m,n,q;
+	int r,c;
+	cin>>t;
+	while(t--)
+	{
+		cin>>m>>n>>q;
+		vector <string> v(m);
+		for(int i=0;i<m ;i++)
+		{
+				cin>>v[i];//不能v[i][j]會錯
+			
+		}
+		cout<<m<<" "<<n<<" "<<q<<endl;
+		while(q--)
+		{
+			int u=1;
+			cin>>r>>c;
+			char p=v[r][c];
+			bool e=false;
+			bool y=false;
+			while(!e)
+			{
+				for(int i=r-u;i<=r+u ;i++)
+			   {
+			   	 if(y)
+				 {
+				 	e=true;
+				   	break;
+				 }
+			   
+				 for(int j=c-u;j<=c+u;j++)
+				 {
+				 	if(i<0||j<0||i>=m||j>=n)
+					 {
+					 	y=true;
+					    e=true;
+					 	break;
+						
+					 }
+				 
+				  if(v[i][j]!=p)
+				  {
+				 	 e=true;
+					 break;
+				  }
+				 }
+			   }
+			   if(!e)
+			   {
+			   	 u++;
+				}
+			}
+			cout<<2*u-1<<endl;
+		}
+	}
+}

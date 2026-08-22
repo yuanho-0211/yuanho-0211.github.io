@@ -1,0 +1,46 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int n;
+    int t;
+	char q,w;
+	int y=0;
+	cin>>t;
+	while(t--)
+	{
+		 y++;
+	    bool b=false;
+		cin>>q>>w>>n;
+		 vector <vector<long long>> v(n,vector<long long>(n));
+		 for(int i=0;i<n ;i++)
+		 {
+		 	for(int j=0;j<n ;j++)
+			 {
+			 	cin>>v[i][j];
+			 }
+		 }
+		 for(int i=0;i<n ;i++)
+		 {
+		 	for(int j=0;j<n ;j++)
+			 {
+			 	if(v[i][j]!=v[n-i-1][n-j-1]||v[i][j]<0)
+				 {
+				 	b=true;
+					 break;
+				 }
+			 }
+			 if(b)
+			 {
+			 	break;
+			 }
+		 }
+		 if(b)
+		 {
+		 	cout<<"Test #"<<y<<": Non-symmetric."<<endl;
+			continue;
+		 }
+		 	cout<<"Test #"<<y<<": Symmetric."<<endl;
+	}
+}

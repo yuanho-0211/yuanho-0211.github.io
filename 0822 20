@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int s,d,t;
+	cin>>t;
+	while(t--)
+	{
+		cin>>s>>d;
+		if(d>s)
+		{
+			cout<<"impossible"<<endl;
+			continue;
+		}
+		//float a=(s+d)/2;
+		
+		if((s+d)%2!=0)
+		{
+			cout<<"impossible"<<endl;
+			continue;
+		}
+		int a=(s+d)/2;
+		int b=s-a;
+		cout<<max(a,b)<<" "<<min(a,b)<<endl;
+	}
+}

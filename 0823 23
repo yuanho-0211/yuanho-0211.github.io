@@ -1,0 +1,88 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+	int t;
+	int a;
+	int q=0;
+	bool b;
+	while(cin>>t)
+	{
+		q++;
+		vector<int>n;
+	    vector<int>m;
+		//vector<int>u;
+		int p=0;
+		bool e=false;
+		while(t--)
+		{
+			cin>>a;
+	       //a=n[p];
+		   
+			n.push_back(a);
+			if(n[p]<1)
+			{
+				e=true;
+			}
+			if(p-1>=0)
+			{
+			  if(n[p-1]>=n[p]) //n[p]<1
+			  {
+				  e=true;
+			  }
+			}
+			p++;
+		}
+		if(e)
+		{
+			cout<<"Case #"<<q<<": It is not a B2-Sequence."<<endl;
+			cout<<endl;
+			continue;
+		}
+		int y=0;
+		for(int i=0;i<n.size() ;i++)
+		{
+			for(int j=i;j< n.size();j++)
+			{
+				int r=n[i]+n[j];
+				b=false;
+				for(int k=0;k<y;k++)
+				{
+					if(r==m[k])
+					{
+						b=true;
+						break;
+					}
+				}
+				if(!b)
+				{
+					y++;
+					//m[y-1]=r;
+					m.push_back(r);
+					//u[y-1]++;
+				}
+				if(b)
+			    {
+				   break;
+			    }
+				
+			}
+			if(b)
+			{
+				break;
+			}
+		}
+		if(b)
+		{
+		 cout<<"Case #"<<q<<": It is not a B2-Sequence."<<endl;
+		}
+		else
+		{
+			cout<<"Case #"<<q<<": It is a B2-Sequence."<<endl;
+			
+		}
+		cout<<endl;
+	}
+	
+}

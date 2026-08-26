@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s;
+	int y;
+	while(cin>>s)
+	{
+		if(s=="0")
+		{
+			break;
+		}
+		int m=0;
+		for(int i=0;i<s.size() ;i++)
+		{
+			m=m+s[i]-'0';
+		}
+		int t=0;
+		int y=1;
+		while(m>9)
+		{
+			while(m>0)
+		   {
+		     t=t+m%10;
+			  m=m/10;
+		   }
+			m=t;
+			t=0;
+			y++;
+		}
+   
+
+		 if(m==9)
+		 {
+		 	cout<<s<<" is a multiple of 9 and has 9-degree "<<y<<"."<<endl;
+		 }
+		 else
+		 {
+		 	cout<<s<<" is not a multiple of 9."<<endl;
+		 }
+	}
+}
+
+

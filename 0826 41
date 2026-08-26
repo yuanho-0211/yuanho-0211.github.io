@@ -1,0 +1,44 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s;
+	while(getline(cin,s))
+	{
+		int a[256]={0};
+		int b[256];
+		int c[256];
+		int m=0;
+		for(int i=0;i<s.size() ;i++)
+		{
+			a[int(s[i])]++;
+			
+		}
+		for(int i=0;i<256 ;i++)
+		{
+			if(a[i]>0)
+			{
+				b[m]=i;
+				c[m]=a[i];
+				m++;
+			}
+		}
+		for(int i=0;i<m-1;i++)
+	    {
+			for(int j=0;j<m-i-1 ;j++)
+			{
+				if(c[j]>c[j+1]||c[j]==c[j+1]&&b[j]<b[j+1])
+				{
+					swap(c[j],c[j+1]);
+					swap(b[j],b[j+1]);
+				}
+			}
+		}
+		for(int i=0;i<m ;i++)
+		{
+			cout<<b[i]<<" "<<c[i]<<endl;
+		}
+		cout<<endl;
+	}
+}

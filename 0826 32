@@ -1,0 +1,44 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int  main()
+{
+	long long a,b;
+	while(cin>>a>>b)
+	{
+		vector <int> v;
+		v.push_back(a);
+		bool p=false;
+		if(b==0)
+		{
+			cout<<"Boring!"<<endl;
+			continue;
+		}
+		while(a/b>0)
+		{
+			if(a%b!=0)
+			{
+				p=true;
+				break;
+			}
+			v.push_back(a/b);
+			a=a/b;
+		}
+		if(a!=1)
+		{
+			p=true;
+		}
+		if(p)
+		{
+			cout<<"Boring!"<<endl;
+			continue;
+		
+		}
+		for(int i=0;i<v.size() ;i++)
+		{
+			cout<<v[i]<<" ";
+		}
+		cout<<endl;
+		
+	}
+}

@@ -1,0 +1,54 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s;
+	while(cin>>s)
+	{
+		int u=stoi(s);
+		bool b=false;
+		for(int i=2;i*i<=u;i++)
+		{
+			if(u%i==0)
+			{
+				b=true;
+				break;
+			}
+		}
+		if(b)
+		{
+			cout<<u<<" is not prime."<<endl;
+			continue;
+		}
+	    bool y=false;
+		string a="";//" "
+	   
+		for(int i=s.size()-1;i>=0;i--)
+		{
+			a=a+s[i];
+		}
+		if(a==s)
+		{
+			cout<<u<<" is prime."<<endl;
+			continue;
+		}
+		int h=stoi(a);
+		for(int i=2;i*i<=h;i++)
+		{
+			if(h%i==0)
+			{
+				y=true;
+				break;
+			}
+		}
+		if(y)
+		{
+			cout<<u<<" is prime."<<endl;
+		}
+		else
+		{
+			cout<<u<<" is emirp."<<endl;
+		}
+	}
+}

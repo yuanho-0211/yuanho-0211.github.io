@@ -1,0 +1,55 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int d;
+	while(cin>>d)
+	{
+		if(d==0)
+		{
+			break;
+		}
+	
+		 int t=1,b=6,e=4,s=5,w=3,n=2;
+	
+		while(d--)
+		{
+			string g;
+		    cin>>g;
+			if(g=="east")
+			{
+				int u=t;
+				t=w;
+				w=b;
+				b=e;
+				e=u;
+			}
+			else if(g=="south")
+			{
+				int u=t;
+				t=n;
+				n=b;
+				b=s;
+				s=u;
+			}
+			else if(g=="west")
+			{
+				int u=t;
+				t=e;
+				e=b;
+				b=w;
+				w=u;
+			}
+			else
+			{
+				int u=t;
+				t=s;
+				s=b;
+				b=n;
+				n=u;
+			}
+		}
+		cout<<t<<endl;
+	}
+}

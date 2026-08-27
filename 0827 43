@@ -1,0 +1,47 @@
+#include<iostream>
+#include<iomanip>
+#include<algorithm>
+#include<string>
+#include<vector>
+using namespace std;
+int main()
+{
+	int t;
+	string s;
+	cin>>t;
+	cin.ignore();
+	//cin>>s
+	getline(cin,s);
+	while(t--)
+	{
+	    vector <string> v;
+		while(getline(cin,s))
+		{
+			//if(s=="\n")
+			if(s=="")
+			{
+				break;
+			}
+			v.push_back(s);
+		}
+		sort(v.begin(),v.end());
+		
+		int i=0;
+		while(i<v.size())
+		{
+			int a=1;
+		
+			while(i+1<v.size()&&v[i+1]==v[i])
+			{
+				a++;
+				i++;
+			}
+			cout<<v[i]<<" "<<fixed<<setprecision(4)<<(double)a/v.size()*100<<endl;
+			i++;
+		}
+		if(t>0)
+		{
+			cout<<endl;
+		}
+	}
+}

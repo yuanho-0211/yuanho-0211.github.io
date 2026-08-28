@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long t,x,y;
+	cin>>t;
+	long long a,b,c,d;
+	int u=0;
+	while(t--)
+	{
+		u++;
+	
+		cin>>a>>b>>c>>d;
+		x=(a+b)*(a+b+1)/2+a;
+		y=(c+d)*(c+d+1)/2+c;
+		cout<<"Case "<<u<<": "<<abs(y-x)<<endl;
+	}
+}

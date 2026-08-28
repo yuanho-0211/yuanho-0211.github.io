@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int a,b;
+	string c;
+	while(cin>>a>>b>>c)
+	{
+		double pi=acos(-1);
+	
+		double r=a+6440;
+		double g;
+		if(c=="deg")
+		{
+			g=b*pi/180;
+		}
+		else
+		{
+			g=b*pi/180/60;
+		}
+		if(g>pi)
+       {
+        g=2*pi-g;
+       } 
+		double u=2*sin(g/2)*r;
+		cout<<fixed<<setprecision(6)<<(double)r*g<<" "<<u<<endl;
+		
+	}
+}

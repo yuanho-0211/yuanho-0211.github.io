@@ -1,0 +1,38 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	double a,b,c,d,e,f,g,h;
+	while(cin>>a>>b>>c>>d>>e>>f>>g>>h)
+	{
+		double x[4]={a,c,e,g};
+		double y[4]={b,d,f,h};
+		int u=0;
+		for(int i=0;i<4 ;i++)
+		{
+			for(int j=i+1;j< 4;j++)
+			{
+				if(x[i]==x[j]&&y[i]==y[j])
+				{
+					u=i;
+					break;
+				}
+			}
+			 if(u!=0)
+			 {
+				break;
+			 }
+		}
+		double m=0,n=0;
+		for(int i=0;i< 4;i++)
+		{
+			if(x[i]!=x[u]||y[i]!=y[u])
+			{
+				m=m+x[i];
+				n=n+y[i];
+			}
+		}
+		cout<<fixed<<setprecision(3)<<m-x[u]<<" "<<n-y[u]<<endl;
+	}
+}

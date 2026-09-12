@@ -1,0 +1,36 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+int main()
+{
+	string s;
+	vector <string> v;
+	int m=0;
+	while(getline(cin,s))
+	{
+		v.push_back(s);
+	}
+	
+	for(int i=0;i<v.size();i++)
+	{
+		if(v[i].size()>m)
+		{
+			m=v[i].size();
+		}
+	}
+	for(int i=0;i<m;i++)
+	{
+		for(int j=v.size()-1;j>=0;j--)
+		{
+			if(v[j].size()<=i)
+			{
+				cout<<" ";
+				continue;
+			}
+		
+			cout<<v[j][i];
+		}
+		cout<<endl;
+	}
+}

@@ -20,11 +20,12 @@ int main()
         }
         else if(s=="min")
         {
-            p=b/60;
+            
             if(b>180)
            {
                b=abs(360-b);
            }
+		    p=b/60;
            p=p*pi/180;
         }
         m=(6440+a)*p;
